@@ -1,0 +1,19 @@
+{
+  "name": "pro-node-js",
+  "version": "0.0.1",
+  "description": "There is a test module",
+  "main": "app.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "keywords": [
+    "test",
+    "awesome"
+  ],
+  "author": "piotrekbass",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "~0.6.2",
+    "async": "~0.2.10"
+  }
+}
