@@ -1,10 +1,11 @@
 {
   "name": "pro-node-js",
   "version": "0.0.1",
-  "description": "There is a test module",
+  "description": "This is a test module",
   "main": "app.js",
   "scripts": {
     "test": "test.js"
+
   },
   "keywords": [
     "test",
