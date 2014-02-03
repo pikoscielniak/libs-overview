@@ -1,1 +1,1 @@
-var test = require('./asyncQueue');
+var test = require('./asyncWhilst');
