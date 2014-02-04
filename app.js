@@ -1,1 +1,1 @@
-var test = require('./eventsTimers/events1');
+var test = require('./eventsTimers/listenersInteraction');
