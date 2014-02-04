@@ -4,20 +4,58 @@ var EventEmitter = events.EventEmitter;
 
 var emitter = new EventEmitter();
 
-emitter.on('newListener', function (eventName, listener) {
-    console.log("Added listener for " + eventName + " events");
-});
+function showListenerCount(eventName) {
+    console.log(EventEmitter.listenerCount(emitter, eventName));
+}
 
-emitter.on("foo", function () {
-    console.log("In foo handler 1");
-});
+function listenerCount() {
+    console.log('listenerCount');
+    emitter.on('newListener', function (eventName, listener) {
+        console.log("Added listener for " + eventName + " events");
+    });
 
-emitter.on("foo", function () {
-    console.log("In foo handler 2");
-});
+    emitter.on("foo", function () {
+        console.log("In foo handler 1");
+    });
 
-console.log(EventEmitter.listenerCount(emitter, "foo"));
+    emitter.on("foo", function () {
+        console.log("In foo handler 2");
+    });
+    showListenerCount("foo");
+}
 
-emitter.listeners("foo").forEach(function (handler) {
-    handler();
-});
+function listenerArray() {
+    console.log('listenerArray');
+    emitter.listeners("foo").forEach(function (handler) {
+        handler();
+    });
+}
+
+function handler() {
+    console.log("Named handler");
+}
+
+function removeAllListeners() {
+    console.log('removeAllListeners');
+    showListenerCount("foo");
+    emitter.removeAllListeners();
+    showListenerCount("foo");
+}
+
+function removeAllWithEventName() {
+    console.log('removeAllWithEventName');
+    emitter.on('foo', handler);
+    emitter.on('buzz', handler);
+
+    showListenerCount("foo");
+    showListenerCount("buzz");
+
+    emitter.removeAllListeners('foo');
+    showListenerCount("foo");
+    showListenerCount("buzz");
+}
+
+listenerCount();
+listenerArray();
+removeAllListeners();
+removeAllWithEventName();
