@@ -1,1 +1,1 @@
-var test = require('./asyncWhilst');
+var test = require('./asyncLib/asyncWhilst');
