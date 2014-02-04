@@ -4,6 +4,10 @@ var EventEmitter = events.EventEmitter;
 
 var emitter = new EventEmitter();
 
+emitter.on('newListener', function (eventName, listener) {
+    console.log("Added listener for " + eventName + " events");
+});
+
 emitter.on("foo", function () {
     console.log("In foo handler 1");
 });
