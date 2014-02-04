@@ -9,7 +9,7 @@ function showListenerCount(eventName) {
 }
 
 function listenerCount() {
-    console.log('listenerCount');
+    console.log('-----listenerCount-----');
     emitter.on('newListener', function (eventName, listener) {
         console.log("Added listener for " + eventName + " events");
     });
@@ -25,8 +25,8 @@ function listenerCount() {
 }
 
 function listenerArray() {
-    console.log('listenerArray');
-    emitter.listeners("foo").forEach(function (handler) {
+    console.log('-----listenerArray-----');
+    emitter.listeners('foo').forEach(function (handler) {
         handler();
     });
 }
@@ -36,14 +36,14 @@ function handler() {
 }
 
 function removeAllListeners() {
-    console.log('removeAllListeners');
+    console.log('-----removeAllListeners------');
     showListenerCount("foo");
     emitter.removeAllListeners();
     showListenerCount("foo");
 }
 
 function removeAllWithEventName() {
-    console.log('removeAllWithEventName');
+    console.log('------removeAllWithEventName------');
     emitter.on('foo', handler);
     emitter.on('buzz', handler);
 
@@ -55,7 +55,18 @@ function removeAllWithEventName() {
     showListenerCount("buzz");
 }
 
+function removeListener() {
+    console.log('------removeListener------');
+    emitter.on('foo', handler);
+    emitter.on('foo', function () {
+    });
+    showListenerCount('foo');
+    emitter.removeListener('foo', handler);
+    showListenerCount('foo');
+}
+
 listenerCount();
 listenerArray();
 removeAllListeners();
 removeAllWithEventName();
+removeListener();
