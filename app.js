@@ -1,1 +1,1 @@
-var test = require('./eventsTimers/inheritance');
+var test = require('./eventsTimers/avoidingPyramidOfDoom');
