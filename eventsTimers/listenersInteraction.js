@@ -64,9 +64,14 @@ function removeListener() {
     emitter.removeListener('foo', handler);
     showListenerCount('foo');
 }
+function settingMaxListeners() {
+    emitter.setMaxListeners(10) //default 10, 0 unlimited
+
+}
 
 listenerCount();
 listenerArray();
 removeAllListeners();
 removeAllWithEventName();
 removeListener();
+settingMaxListeners();
