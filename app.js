@@ -1,1 +1,1 @@
-var test = require('./timersAndScheduling/longRunningTasks');
+var test = require('./timersAndScheduling/schedullingWithNextTick');
