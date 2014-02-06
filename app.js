@@ -1,1 +1,1 @@
-var test = require('./timersAndScheduling/schedullingWithNextTick');
+var test = require('./timersAndScheduling/asynchronousCallback');
