@@ -1,1 +1,1 @@
-var test = require('./eventsTimers/avoidingPyramidOfDoom');
+var test = require('./timersAndScheduling/usingSetTimeout');
