@@ -1,1 +1,1 @@
-var test = require('./timersAndScheduling/usingSetTimeout');
+var test = require('./timersAndScheduling/usingInvervals');
