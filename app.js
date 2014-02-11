@@ -1,3 +1,5 @@
-var test = require('./standardStreams/usingCommander');
+var test = require('./standardStreams/writingData');
+
+
 
 
