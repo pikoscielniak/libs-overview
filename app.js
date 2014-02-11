@@ -1,3 +1,3 @@
-var test = require('./commandLineInterface/commanderOverview');
+var test = require('./standardStreams/readingDataFromStdin');
 
 
