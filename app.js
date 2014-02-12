@@ -1,4 +1,4 @@
-var test = require('./standardStreams/writingData');
+var test = require('./standardStreams/errorOutput');
 
 
 
