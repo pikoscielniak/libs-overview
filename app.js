@@ -1,4 +1,4 @@
-var test = require('./fileSystem/fsModule');
+var test = require('./streams/workingWithStream');
 
 
 
