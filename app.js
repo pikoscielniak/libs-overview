@@ -1,4 +1,4 @@
-var test = require('./standardStreams/errorOutput');
+var test = require('./fileSystem/fsModule');
 
 
 
