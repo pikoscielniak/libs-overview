@@ -1,5 +1,1 @@
-var test = require('./streams/workingWithStream');
-
-
-
-
+var test = require('./streams/createReadStream');
