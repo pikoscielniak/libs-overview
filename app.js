@@ -1,1 +1,1 @@
-var test = require('./streams/writeStream');
+var test = require('./streams/compression');
