@@ -1,1 +1,1 @@
-var test = require('./streams/createReadStream');
+var test = require('./streams/writeStream');
