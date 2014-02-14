@@ -1,1 +1,1 @@
-var test = require('./streams/compression');
+var test = require('./binaryData/arrayBuffers');
