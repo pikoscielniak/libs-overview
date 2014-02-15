@@ -1,1 +1,1 @@
-var test = require('./executingCode/child_processModule');
+var test = require('./executingCode/parentCounter');

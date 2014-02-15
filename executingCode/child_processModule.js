@@ -46,3 +46,11 @@ child.on("close", function (code, signal) {
 console.log("PID " + child.pid);
 
 child.kill("SIGTERM");
+
+
+var forkChild = cp.fork(__dirname + "/child", ["-foo"], {
+    cwd: '/',
+    env: {
+        bar: "baz"
+    }
+});
