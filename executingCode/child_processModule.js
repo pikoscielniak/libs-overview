@@ -23,4 +23,26 @@ cp.execFile("ls", ["-l"], {
     } else {
         console.log(stdout);
     }
-})
+});
+
+var child = cp.spawn("ls", ["-l", "/"]);
+
+child.stdout.on("data", function (data) {
+    process.stdout.write(data.toString());
+});
+
+child.on("error", function (error) {
+    console.error(error.toString());
+});
+
+child.on("exit", function (code, signal) {
+    console.log("exit code: " + code);
+    console.log("exit signal: " + signal);
+});
+child.on("close", function (code, signal) {
+    console.log("exit code: " + code);
+    console.log("exit signal: " + signal);
+});
+console.log("PID " + child.pid);
+
+child.kill("SIGTERM");
