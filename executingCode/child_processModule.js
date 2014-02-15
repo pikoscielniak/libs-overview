@@ -13,7 +13,9 @@ cp.exec("ls -l /", {
 });
 
 
-cp.execFile("ls", ["-l", "/"], function (error, stdout, stderr) {
+cp.execFile("ls", ["-l"], {
+    cwd: '/'
+}, function (error, stdout, stderr) {
     if (error) {
         console.error(error.toString());
     } else if (stderr !== "") {
