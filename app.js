@@ -1,1 +1,1 @@
-var test = require('./executingCode/parentCounter');
+var test = require('./executingCode/vmModule');
