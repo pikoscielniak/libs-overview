@@ -13,7 +13,7 @@ cp.exec("ls -l /", {
 });
 
 
-cp.execFile("ls", function (error, stdout, stderr) {
+cp.execFile("ls", ["-l", "/"], function (error, stdout, stderr) {
     if (error) {
         console.error(error.toString());
     } else if (stderr !== "") {
