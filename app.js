@@ -1,1 +1,1 @@
-var test = require('./networkProgramming/dnsModule');
+var test = require('./networkProgramming/netModule');
