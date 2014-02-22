@@ -3,7 +3,10 @@ var http = require("http");
 var app = express();
 var validator = require('express-validator');
 
+app.use(express.favicon());
+app.use(express.logger("dev"));
 app.use(express.bodyParser());
+app.use(express.methodOverride());
 app.use(validator());
 
 
