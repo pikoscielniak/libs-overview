@@ -1,1 +1,1 @@
-var test = require('./theExpressFramework/si');
+var test = require('./webSocketsApi/wsModule');
