@@ -1,1 +1,1 @@
-var test = require('./webSocketsApi/wsModule');
+var test = require('./webSocketsApi/usingSocketIo');
